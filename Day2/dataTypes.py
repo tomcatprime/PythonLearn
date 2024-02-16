@@ -52,3 +52,4 @@ print(2*2)
 print(100/4) #when dividing, all the time ending up with float number
 2 ** 3 # power of = equals to 2 * 2 * 2
 
+
