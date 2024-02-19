@@ -23,3 +23,19 @@ avg = round(total / numOfStudents)
 print(f"total height = {total}")
 print(f"number of students = {numOfStudents}")
 print(f"average height = {avg}")
+
+
+
+# //largest number without max() and min()
+
+student_scores = input().split()
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+
+# Write your code below this row 👇
+highestScore = 0
+for score in student_scores:
+  if score > highestScore:
+    highestScore = score
+
+print(f"The highest score in the class is: {highestScore}")
