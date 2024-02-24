@@ -3,32 +3,30 @@ print("Welcome in blind auction program")
 import os
 
 print("Let's start")
+
+
+bids = {}
 isGameEnd = False
 
-biders = {}
 
-
-def auctionList(name, bid):
-    auction = {}
-    name = biders[name]
-    print(name)
+def findHighestBidder(bidding_records):
+    highestBid = 0
+    winner = ""
+    for bidder in bidding_records:
+        bid_amount = bidding_records[bidder]
+        if bid_amount > highestBid:
+            highestBid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highestBid}")
 
 
 while not isGameEnd:
     name = input("What is your name?\n")
-    bid = int(input("What is your bid? \n"))
-    auctionList(name, bid)
-    other_user = input("Are there other users who want to bid?: \n")
-    if other_user == "no":
+    price = int(input("What is your bid?: $ \n"))
+    bids[name] = price
+    should_continue = input("Are there any others bidders? Type 'yes' or 'no.\n")
+    if should_continue == "no":
         isGameEnd = True
-        score = 0
-        print(biders)
-
-        # for name in biders:
-        #     if biders[name] >= score:
-        #         score = biders[name]
-        #     print(score)
-
+        findHighestBidder(bids)
     else:
         os.system("clear")
-print(biders)
