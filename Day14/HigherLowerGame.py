@@ -48,11 +48,7 @@ while game_continue:
     b_follower_count = account_b["follower_count"]
 
     is_correct = check_answer(guess, a_follower_count, b_follower_count)
-
-
     os.system('cls')
-
-
     if is_correct:
         score += 1
         print(f"YOu right!!!, Current score: {score}.")
@@ -61,4 +57,3 @@ while game_continue:
         game_continue = False
         print(f"Sorry, that's wrong! Final score: {score}.")
     # user if statement to check if user is correct
-
