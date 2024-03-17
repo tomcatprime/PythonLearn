@@ -32,3 +32,22 @@ print(re.search(r"[Pp]ython", "oliPythonista"))
 print(re.search(r"[a-z]way", "The end of the highway"))
 print(re.search(r"[a-z]way", "What a way to go"))
 print(re.search(r"[A-Z]on", "Matching amAon"))
+
+#coursera exercise
+
+#Fill in the code to check if the text passed contains punctuation symbols:
+#commas, periods, colons, semicolons, question marks, and exclamation points.
+import re
+def check_punctuation (text):
+  result = re.search(r"[,.:;?!]", text)
+  return result != None
+
+print(check_punctuation("This is a sentence that ends with a period.")) # True
+print(check_punctuation("This is a sentence fragment without a period")) # False
+print(check_punctuation("Aren't regular expressions awesome?")) # True
+print(check_punctuation("Wow! We're really picking up some steam now!")) # True
+print(check_punctuation("End of the line")) # False
+
+print(re.search(r"cat|dog", "Matching cat"))
+print(re.findall(r"cat|dog", "Finding all cats and dogs"))
+
