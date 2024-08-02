@@ -19,7 +19,7 @@ user_params = {
     "notMinor":"yes",
 }
 # Create user
-response = requests.post(url=pixela_endpoint, json=user_params)
+response = requests.post(url=pixela_endpoint, json=user_params, verify=False)
 response_json = response.json()
 
 is_success = response.json()
