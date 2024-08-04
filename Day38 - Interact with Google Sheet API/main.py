@@ -17,6 +17,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
+
 exercise_text = input("Tell me what did you exercise: ")
 gender = input("Your Gender: Male or Female? ")
 weight_kg = int(input("Type your weight in kg: "))
@@ -25,7 +26,7 @@ age_no = int(input("Type your age: "))
 
 params = {
     "query": exercise_text,
-    "gener": gender,
+    "gender": gender,
     "weight_kg": weight_kg,
     "height_cm": height_cm,
     "age": age_no
