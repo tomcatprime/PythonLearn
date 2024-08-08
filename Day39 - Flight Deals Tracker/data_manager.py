@@ -39,7 +39,4 @@ class DataManager:
                 json=new_data
                 )
             
-            
-            
-json_data = DataManager.get_destination_data()
-print(json_data)
+
