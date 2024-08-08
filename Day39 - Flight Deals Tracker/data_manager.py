@@ -26,7 +26,20 @@ class DataManager:
         return self.destination_data
 
 
-
-
-
-
+    def update_destination_codes(self):
+        for city in self.destination_data:
+            new_data = {
+                "price": {
+                    "iataCode": city["iataCode"]
+                }
+            }
+            
+            response = requests.put(
+                url=f"{sheety_endpoint}/{city['id']}",
+                json=new_data
+                )
+            
+            
+            
+json_data = DataManager.get_destination_data()
+print(json_data)
