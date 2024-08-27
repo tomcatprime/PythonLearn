@@ -15,3 +15,4 @@ print(soup.title)
 print(soup.prettify())
 
 print(soup.li)
+print(soup.p)
