@@ -22,9 +22,10 @@ class Main:
     def __init__(self, bill_amount, customer_name, item_id):
         self.customer_name = customer_name
         self.item_id = item_id
+        self.bill_amount = bill_amount
         print("Welcome ", self.customer_name, "You have to pay ", self.bill_amount, "for a " + self.item_id)
 
-    def purchase(self.item_id, bill_amount):
+    def purchase(self, item_id, bill_amount):
         if self.item_id == "Two Wheeler":
             self.bill_amount = self.bill_amount - (self.bill_amount * 0.02)
         elif self.item_id == "Four Wheeler":
@@ -32,3 +33,4 @@ class Main:
         else:
             print("Invalid Vehicle Type")
         
+mob1 = Main(100000, "Tom", "Two Wheeler")
