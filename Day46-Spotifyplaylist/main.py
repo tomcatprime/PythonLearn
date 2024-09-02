@@ -12,4 +12,5 @@ website = requests.get(URL)
 soup = BeautifulSoup(website.text, "lxml")
 song_names_spans = soup.select("li ul li h3")
 song_names = [song.getText().strip() for song in song_names_spans]
+print("Here are the top 100 songs from that date: ")
 print(song_names)
