@@ -42,11 +42,11 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(client_id=YOUR_APP_CLIENT_ID,
                                                redirect_uri=YOUR_APP_REDIRECT_URI,
                                                scope="playlist-modify-private"))
 
-USER_ID = sp.current_user()["id"]
+USER_ID = sp.current_user()["id"] # type: ignore
 
 #Searching Spotify for songs by title
 #Adding the song URIs to a new playlist
-playlist = sp.user_playlist_create(user=USER_ID, name=f"{user_date} Billboard 100", public=False)
+playlist = sp.user_playlist_create(user=USER_ID, name=f"Billboard Hot 100 from {user_date}.", public=False)
 PLAYLIST_ID = playlist["id"]
 print(f"Playlist has been created. {PLAYLIST_ID} /nAdding songs to the playlist...")
 SONG_URI = []
@@ -54,11 +54,12 @@ for song in playlist_tracks:
     print(song)
     song_search = sp.search(q=song, type="track", market="PL", limit=1)
     print("Found")
-    song_uri = song_search["tracks"]["items"][0]["uri"]
-    print(song_uri)
+    song_uri = song_search["tracks"]["items"][0]["uri"] # type: ignore
+    # print(song_uri)
     print("Adding to playlist...")
     SONG_URI.append(song_uri)
+    print("Done")
 
 sp.playlist_add_items(playlist_id=PLAYLIST_ID, items=SONG_URI)
-print(SONG_URI)
+
 print("Playlist created successfully!")
