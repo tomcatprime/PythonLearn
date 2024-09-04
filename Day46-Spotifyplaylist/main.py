@@ -53,10 +53,10 @@ SONG_URI = []
 for song in playlist_tracks:
     print(song)
     song_search = sp.search(q=song, type="track", market="PL", limit=1)
-    print("Found")
+    # print("Found")
     song_uri = song_search["tracks"]["items"][0]["uri"] # type: ignore
     # print(song_uri)
-    print("Adding to playlist...")
+    # print("Adding to playlist...")
     SONG_URI.append(song_uri)
     print("Done")
 
