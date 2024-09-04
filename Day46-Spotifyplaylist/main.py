@@ -14,3 +14,9 @@ song_names_spans = soup.select("li ul li h3")
 song_names = [song.getText().strip() for song in song_names_spans]
 print("Here are the top 100 songs from that date: ")
 print(song_names)
+
+artist_all = soup.find_all("span", class_="a-no-trucate")
+artist_name = [artist.getText().strip() for artist in artist_all]
+print(artist_name)
+
+playlist = []
