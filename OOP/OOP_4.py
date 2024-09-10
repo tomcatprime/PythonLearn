@@ -31,6 +31,6 @@ class Customer:
     def show_balance(self):
         print ("The balance is ",self.__wallet_balance)
 c1=Customer(100, "Gopal", 24, 1000)
-c1._Customer__wallet_balance = 10000000000
+# c1._Customer__wallet_balance = 10000000000
 c1.show_balance()
 
