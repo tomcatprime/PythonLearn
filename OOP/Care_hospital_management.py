@@ -22,6 +22,7 @@ class Patient:
         for lab_test_id in list_of_lab_tests_ids:
             lab_test_charge = LabtestRepository().get_test_charge(lab_test_id)
             total_charge += lab_test_charge
+            print(f"Lab test {lab_test_id} charge: ${lab_test_charge}")
         return total_charge 
     
 
