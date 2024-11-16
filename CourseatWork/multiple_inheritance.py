@@ -7,7 +7,7 @@ class Phone:
     def buy(self):
         print ("Buying a phone")
     def return_phone(self):
-        print ("Returning a phone")
+        print ("Returning a phone.")
 class Product:
     def review(self):
         print ("Customer review")
