@@ -44,7 +44,7 @@ class OccasionalCustomer(Customer):
     def calculate_bill_amount(self):
 
 
-s1 = Customer("Karol")
+s1 = Customer("Karol.")
 print(s1.get_customer_name())
 print(s1.counter)
 s2 = Customer("Szejker")
