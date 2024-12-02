@@ -42,9 +42,10 @@ class OccasionalCustomer(Customer):
         return 1 <= self.distance_in_kms <= 5
 
     def calculate_bill_amount(self):
+        pass
 
 
-s1 = Customer("Karol.")
+s1 = Customer("Karol")
 print(s1.get_customer_name())
 print(s1.counter)
 s2 = Customer("Szejker")
