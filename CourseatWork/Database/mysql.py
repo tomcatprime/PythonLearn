@@ -1,14 +1,17 @@
-import mysql.connector  
+import mysql.connector
+import os
+from dotenv import load_dotenv
 
-con = mysql.connector.connect(host="host", user="username", password="password", database="database_name")
+load_dotenv()
+HOST = os.getenv("HOST")
+USER = os.getenv("USER")
+PASSWORD = os.getenv("PASSWORD")
 
-con.close()
+con = mysql.connector.connect(host=HOST, user=USER, password=PASSWORD, database="lexlabs")
 
 cur = con.cursor()
 cur.execute("INSERT INTO Computer VALUES (1005,'Toshiba','Tecra',2013)")
 print(cur.rowcount)
-cur.close()
-
 
 #Committing the changes
 con.commit() 
