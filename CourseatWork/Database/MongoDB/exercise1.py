@@ -41,10 +41,12 @@ try:
         print(f"Found...{doc}")
     
     #update dept of Jogn as "DNA"
-    collection_obj.update({'Name':'John'},{'$set':{'Dept':'DNA'}})
-    
+    print("Updating John Department to DNA")
+    collection_obj.update_one({'Name':'John'},{'$set':{'Dept':'DNA'}})
+    print("Done")
     # print collection
     docs2 = collection_obj.find()
+    print("Printing collection")
     for doc in docs2:
         print(doc)
     
